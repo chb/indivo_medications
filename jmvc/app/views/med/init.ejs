@@ -1,0 +1,27 @@
+<h2>Medications</h2>
+
+<table class="light">
+    <thead>
+    <tr>
+      <th>name</th>
+      <th>dose</th>
+      <th>route</th>
+      <th>started on</th>
+      <!-- <th>Options</th> -->
+    </tr>
+    </thead>
+    <tbody>
+        <%= view('./views/med/list',{meds: meds})%>
+    </tbody>
+</table>
+<!-- <h2>New med</h2>
+<form>
+    <% for(var attr in App.Models.Med.attributes){ %>
+        <% if(attr == 'id') continue;%>
+        <div>
+            <label><%= attr %> </label><br />
+            <input type="text" value="" name="<%= attr %>"/>
+        </div>
+    <%}%>
+    <input type='submit' value='Create'/>
+</form> -->

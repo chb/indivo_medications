@@ -1,0 +1,772 @@
+<!--
+BN - brand name	    SBD - branded drug
+BPCK - branded pack	    SBDC - branded drug component
+DF - dose form	    SBDF - branded drug form
+GPCK - generic pack	    SCD - clinical drug
+IN - ingredient	    SCDC - clinical drug component
+PIN - precise ingredient	    SCDF - clinical drug form
+-->
+
+
+<!-- curl http://rxnav.nlm.nih.gov/REST/drugs?name=vioxx -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rxnormdata>
+  <drugGroup>
+    <name>vioxx</name>
+    <conceptGroup>
+      <tty>SBD</tty>
+      <conceptProperties>
+        <rxcui>261239</rxcui>
+        <name>rofecoxib 25 MG Oral Tablet [Vioxx]</name>
+        <synonym>Vioxx 25 MG Oral Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875722</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261238</rxcui>
+        <name>rofecoxib 5 MG/ML Oral Suspension [Vioxx]</name>
+        <synonym>Vioxx 5 MG/ML Oral Suspension</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875721</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261240</rxcui>
+        <name>rofecoxib 12.5 MG Oral Tablet [Vioxx]</name>
+        <synonym>Vioxx 12.5 MG Oral Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875723</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261237</rxcui>
+        <name>rofecoxib 2.5 MG/ML Oral Suspension [Vioxx]</name>
+        <synonym>Vioxx 2.5 MG/ML Oral Suspension</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875720</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261370</rxcui>
+        <name>rofecoxib 50 MG Oral Tablet [Vioxx]</name>
+        <synonym>Vioxx 50 MG Oral Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875866</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>BPCK</tty>
+    </conceptGroup>
+  </drugGroup>
+</rxnormdata>
+
+
+
+<!-- curl http://rxnav.nlm.nih.gov/REST/rxcui?name=vioxx -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <rxnormdata>
+    <idGroup>
+      <name>vioxx</name>
+      <rxnormId>262149</rxnormId>
+    </idGroup>
+  </rxnormdata>
+
+
+<!-- $ curl http://rxnav.nlm.nih.gov/REST/rxcui/262149/allrelated -->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rxnormdata>
+  <allRelatedGroup>
+    <rxcui>262149</rxcui>
+    <conceptGroup>
+      <tty>BN</tty>
+      <conceptProperties>
+        <rxcui>262149</rxcui>
+        <name>Vioxx</name>
+        <synonym/>
+        <tty>BN</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0876768</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>BPCK</tty>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>DF</tty>
+      <conceptProperties>
+        <rxcui>316969</rxcui>
+        <name>Oral
+Suspension</name>
+        <synonym/>
+        <tty>DF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0991537</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>317541</rxcui>
+        <name>Oral
+Tablet</name>
+        <synonym/>
+        <tty>DF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0993159</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>GPCK</tty>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>IN</tty>
+      <conceptProperties>
+        <rxcui>232158</rxcui>
+        <name>rofecoxib</name>
+        <synonym/>
+        <tty>IN</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0762662</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>PIN</tty>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SBD</tty>
+      <conceptProperties>
+        <rxcui>261239</rxcui>
+        <name>rofecoxib
+25 MG Oral Tablet [Vioxx]</name>
+        <synonym>Vioxx 25 MG Oral
+Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875722</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261238</rxcui>
+        <name>rofecoxib
+5 MG/ML Oral Suspension [Vioxx]</name>
+        <synonym>Vioxx 5 MG/ML Oral
+Suspension</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875721</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261240</rxcui>
+        <name>rofecoxib
+12.5 MG Oral Tablet [Vioxx]</name>
+        <synonym>Vioxx 12.5 MG Oral
+Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875723</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261237</rxcui>
+        <name>rofecoxib
+2.5 MG/ML Oral Suspension [Vioxx]</name>
+        <synonym>Vioxx 2.5 MG/ML Oral
+Suspension</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875720</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>261370</rxcui>
+        <name>rofecoxib
+50 MG Oral Tablet [Vioxx]</name>
+        <synonym>Vioxx 50 MG Oral
+Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0875866</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SBDC</tty>
+      <conceptProperties>
+        <rxcui>574585</rxcui>
+        <name>rofecoxib
+50 MG
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1592312</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>574469</rxcui>
+        <name>rofecoxib
+12.5 MG
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1592196</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>574468</rxcui>
+        <name>rofecoxib
+25 MG
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1592195</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>574467</rxcui>
+        <name>rofecoxib
+5 MG/ML
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1592194</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>574466</rxcui>
+        <name>rofecoxib
+2.5 MG/ML
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1592193</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SBDF</tty>
+      <conceptProperties>
+        <rxcui>368197</rxcui>
+        <name>rofecoxib
+Oral Tablet
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1242175</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>366076</rxcui>
+        <name>rofecoxib
+Oral Suspension
+[Vioxx]</name>
+        <synonym/>
+        <tty>SBDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1240042</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SCD</tty>
+      <conceptProperties>
+        <rxcui>312841</rxcui>
+        <name>rofecoxib
+12.5 MG Oral
+Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0980027</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>314210</rxcui>
+        <name>rofecoxib
+25 MG Oral
+Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0981710</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>312844</rxcui>
+        <name>rofecoxib
+50 MG Oral
+Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0980032</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>312843</rxcui>
+        <name>rofecoxib
+5 MG/ML Oral
+Suspension</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0980030</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>312842</rxcui>
+        <name>rofecoxib
+2.5 MG/ML Oral
+Suspension</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0980028</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SCDC</tty>
+      <conceptProperties>
+        <rxcui>346142</rxcui>
+        <name>rofecoxib
+5
+MG/ML</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1154153</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>346141</rxcui>
+        <name>rofecoxib
+2.5
+MG/ML</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1154152</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>346144</rxcui>
+        <name>rofecoxib
+12.5
+MG</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1154155</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>337553</rxcui>
+        <name>rofecoxib
+50
+MG</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1135175</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>346143</rxcui>
+        <name>rofecoxib
+25
+MG</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1154154</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SCDF</tty>
+      <conceptProperties>
+        <rxcui>376431</rxcui>
+        <name>rofecoxib
+Oral
+Tablet</name>
+        <synonym/>
+        <tty>SCDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1250614</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>379117</rxcui>
+        <name>rofecoxib
+Oral
+Suspension</name>
+        <synonym/>
+        <tty>SCDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1253505</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+  </allRelatedGroup>
+</rxnormdata>
+
+
+
+curl http://rxnav.nlm.nih.gov/REST/rxcui/58930/allrelated
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rxnormdata>
+  <allRelatedGroup>
+    <rxcui>58930</rxcui>
+    <conceptGroup>
+      <tty>BN</tty>
+      <conceptProperties>
+        <rxcui>58930</rxcui>
+        <name>Zyrtec</name>
+        <synonym/>
+        <tty>BN</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0162723</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>BPCK</tty>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>DF</tty>
+      <conceptProperties>
+        <rxcui>316968</rxcui>
+        <name>Oral Solution</name>
+        <synonym/>
+        <tty>DF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0991536</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>316965</rxcui>
+        <name>Oral Capsule</name>
+        <synonym/>
+        <tty>DF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0991533</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>91058</rxcui>
+        <name>Chewable Tablet</name>
+        <synonym/>
+        <tty>DF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0304290</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>317541</rxcui>
+        <name>Oral Tablet</name>
+        <synonym/>
+        <tty>DF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0993159</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>GPCK</tty>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>IN</tty>
+      <conceptProperties>
+        <rxcui>20610</rxcui>
+        <name>Cetirizine</name>
+        <synonym/>
+        <tty>IN</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0055147</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>PIN</tty>
+      <conceptProperties>
+        <rxcui>203150</rxcui>
+        <name>Cetirizine Dihydrochloride</name>
+        <synonym/>
+        <tty>PIN</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0700480</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SBD</tty>
+      <conceptProperties>
+        <rxcui>103924</rxcui>
+        <name>Cetirizine 1 MG/ML Oral Solution [Zyrtec]</name>
+        <synonym>Zyrtec 5 MG per 5 ML Syrup</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0353582</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>900375</rxcui>
+        <name>Cetirizine 10 MG Oral Capsule [Zyrtec]</name>
+        <synonym>Zyrtec 10 MG Oral Capsule</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C2741068</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>541030</rxcui>
+        <name>Cetirizine 10 MG Chewable Tablet [Zyrtec]</name>
+        <synonym>Zyrtec 10 MG Chewable Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1585241</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>541102</rxcui>
+        <name>Cetirizine 5 MG Chewable Tablet [Zyrtec]</name>
+        <synonym>Zyrtec 5 MG Chewable Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1585261</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>210597</rxcui>
+        <name>Cetirizine 5 MG Oral Tablet [Zyrtec]</name>
+        <synonym>Zyrtec 5 MG Oral Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0712511</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>210596</rxcui>
+        <name>Cetirizine 10 MG Oral Tablet [Zyrtec]</name>
+        <synonym>Zyrtec 10 MG Oral Tablet</synonym>
+        <tty>SBD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0712510</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SBDC</tty>
+      <conceptProperties>
+        <rxcui>541028</rxcui>
+        <name>Cetirizine 10 MG [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1602105</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>541101</rxcui>
+        <name>Cetirizine 5 MG [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1602153</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>563455</rxcui>
+        <name>Cetirizine 1 MG/ML [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1595900</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SBDF</tty>
+      <conceptProperties>
+        <rxcui>367925</rxcui>
+        <name>Cetirizine Oral Tablet [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1241901</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>900374</rxcui>
+        <name>Cetirizine Oral Capsule [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C2741067</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>541029</rxcui>
+        <name>Cetirizine Chewable Tablet [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1602106</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>363905</rxcui>
+        <name>Cetirizine Oral Solution [Zyrtec]</name>
+        <synonym/>
+        <tty>SBDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1237850</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SCD</tty>
+      <conceptProperties>
+        <rxcui>309130</rxcui>
+        <name>Cetirizine 10 MG Oral Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0975470</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>476338</rxcui>
+        <name>Cetirizine 5 MG Chewable Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1509279</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>315025</rxcui>
+        <name>Cetirizine 5 MG Oral Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0982629</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>900373</rxcui>
+        <name>Cetirizine 10 MG Oral Capsule</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C2741066</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>476331</rxcui>
+        <name>Cetirizine 10 MG Chewable Tablet</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1509275</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>250637</rxcui>
+        <name>Cetirizine 1 MG/ML Oral Solution</name>
+        <synonym/>
+        <tty>SCD</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C0792562</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SCDC</tty>
+      <conceptProperties>
+        <rxcui>329146</rxcui>
+        <name>Cetirizine 1 MG/ML</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1124238</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>328987</rxcui>
+        <name>Cetirizine 5 MG</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1124027</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>328986</rxcui>
+        <name>Cetirizine 10 MG</name>
+        <synonym/>
+        <tty>SCDC</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1124026</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+    <conceptGroup>
+      <tty>SCDF</tty>
+      <conceptProperties>
+        <rxcui>371364</rxcui>
+        <name>Cetirizine Oral Tablet</name>
+        <synonym/>
+        <tty>SCDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1245405</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>371362</rxcui>
+        <name>Cetirizine Oral Solution</name>
+        <synonym/>
+        <tty>SCDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1245403</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>476332</rxcui>
+        <name>Cetirizine Chewable Tablet</name>
+        <synonym/>
+        <tty>SCDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C1509878</umlscui>
+      </conceptProperties>
+      <conceptProperties>
+        <rxcui>900372</rxcui>
+        <name>Cetirizine Oral Capsule</name>
+        <synonym/>
+        <tty>SCDF</tty>
+        <language>ENG</language>
+        <suppress>N</suppress>
+        <umlscui>C2741065</umlscui>
+      </conceptProperties>
+    </conceptGroup>
+  </allRelatedGroup>
+</rxnormdata>
