@@ -110,9 +110,7 @@ def list_meds(request):
     # print meds_xml
     meds = []
     et = parse_xml(meds_xml)
-    nodes = et.getchildren()
-    # meta = nodes[0]
-    reports = nodes[1:]
+    reports = et.findall('Report')
     
     for report in reports:
       item = report[1]
@@ -154,7 +152,7 @@ def list_meds(request):
         'reason_stopped'        : m.findtext(NS+'reasonStopped'),
         # need if clause in case route is missing.
         'route'                 : m.find(NS+'route').attrib['abbrev'] if m.find(NS+'route') != None else '',
-        'brand_name'            : m.find(NS+'brandName')
+        'brand_name'            : m.findtext(NS+'brandName')
         # 'strength'
         # 'prescription'
         # 'details'
