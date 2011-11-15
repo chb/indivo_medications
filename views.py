@@ -151,7 +151,8 @@ def list_meds(request):
         'date_stopped'          : m.findtext(NS+'dateStopped'),
         'reason_stopped'        : m.findtext(NS+'reasonStopped'),
         # need if clause in case route is missing.
-        'route'                 : m.find(NS+'route').attrib['abbrev'] if m.find(NS+'route') != None else '',
+   #     'route'                 : m.find(NS+'route').attrib.get('abbrev') if m.find(NS+'route') != None else '',
+        'route'                 : m.findtext(NS+'route') if m.find(NS+'route') != None else '',
         'brand_name'            : m.findtext(NS+'brandName')
         # 'strength'
         # 'prescription'
