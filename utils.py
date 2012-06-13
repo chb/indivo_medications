@@ -8,7 +8,7 @@ Arjun Sanyal (arjun.sanyal@childrens.harvard.edu)
 from xml.etree import ElementTree
 import cgi, datetime
 
-from indivo_client_py.lib.client import IndivoClient
+from indivo_client_py import IndivoClient
 
 # settings including where to find Indivo
 import settings
@@ -21,9 +21,11 @@ from django.template import Context, loader
 
 
 def get_indivo_client(request, with_session_token=True):
-    client = IndivoClient(settings.INDIVO_SERVER_OAUTH['consumer_key'], settings.INDIVO_SERVER_OAUTH['consumer_secret'], settings.INDIVO_SERVER_LOCATION)
-    if with_session_token:
-        client.update_token(request.session['access_token'])
+    server_params = {"api_base": settings.INDIVO_SERVER_LOCATION,
+                     "authorization_base": settings.INDIVO_UI_SERVER_BASE}
+    consumer_params = settings.INDIVO_SERVER_OAUTH
+    token = request.session['access_token'] if with_session_token else None
+    client = IndivoClient(server_params, consumer_params, resource_token=token)
     return client
 
 def parse_token_from_response(resp):

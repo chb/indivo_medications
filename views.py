@@ -33,17 +33,15 @@ def start_auth(request):
         params['indivo_record_id'] = record_id
     if carenet_id:
         params['indivo_carenet_id'] = carenet_id
-    
-    params['offline'] = 1
-    
+
     # request a request token
-    request_token = parse_token_from_response(client.post_request_token(data=params))
-    
+    req_token = client.fetch_request_token(params)
+
     # store the request token in the session for when we return from auth
-    request.session['request_token'] = request_token
+    request.session['request_token'] = req_token
     
     # redirect to the UI server
-    return HttpResponseRedirect(settings.INDIVO_UI_SERVER_BASE + '/oauth/authorize?oauth_token=%s' % request_token['oauth_token'])
+    return HttpResponseRedirect(client.auth_redirect_url)
 
 def after_auth(request):
     """
@@ -62,10 +60,7 @@ def after_auth(request):
     # get the indivo client and use the request token as the token for the exchange
     client = get_indivo_client(request, with_session_token=False)
     client.update_token(token_in_session)
-    
-    # create the client
-    params = {'oauth_verifier' : oauth_verifier}
-    access_token = parse_token_from_response(client.post_access_token(data=params))
+    access_token = client.exchange_token(oauth_verifier)
     
     # store stuff in the session
     request.session['access_token'] = access_token
@@ -79,14 +74,6 @@ def after_auth(request):
             del request.session['record_id']
         request.session['carenet_id'] = access_token['xoauth_indivo_carenet_id']
     
-    # now get the long-lived token using this access token
-    client= get_indivo_client(request)
-    try:
-        long_lived_token = parse_token_from_response(client.get_long_lived_token())
-        
-        request.session['long_lived_token'] = long_lived_token
-    except:
-        pass
     return index(request)
 
 def index(request):
@@ -102,67 +89,22 @@ def list_meds(request):
     client = get_indivo_client(request)
     
     if request.session.has_key('record_id'):
-      record_id = request.session['record_id']
-      record = parse_xml(client.read_record(record_id = record_id).response['response_data'])
-      meds_xml = client.read_medications(record_id = record_id).response['response_data']
+        record_id = request.session['record_id']
+        resp, content = client.record(record_id=record_id)
+        if resp['status'] != '200':
+            # TODO: handle errors
+            raise Exception("Error reading Record info: %s"%content)
+        record = parse_xml(content)
+
+        resp, content = client.generic_list(record_id=record_id, data_model="Medication")
+        if resp['status'] != '200':
+            # TODO: handle errors
+            raise Exception("Error reading medications: %s"%content)
+        meds = simplejson.loads(content)
     else:
       print 'FIXME: no client support for meds via carenet. Exiting...'
       return
         
-    # print meds_xml
-    meds = []
-    et = parse_xml(meds_xml)
-    reports = et.findall('Report')
-    
-    for report in reports:
-      item = report[1]
-      m = item[0]
-      NS = '{http://indivo.org/vocab/xml/documents#}'
-      
-      # brand_name = m.find(NS+'brandName').attrib['value']
-      # try:
-      #     rxnorm_id_xml = parse_xml(urllib2.urlopen('http://rxnav.nlm.nih.gov/REST/rxcui?name='+brand_name).read())
-      #     rxnorm_id = rxnorm_id_xml.findtext('idGroup/rxnormId')
-      #     if rxnorm_id:
-      #         all_related_text = urllib2.urlopen('http://rxnav.nlm.nih.gov/REST/rxcui/'+rxnorm_id+'/allrelated').read()
-      #         all_related_xml = parse_xml(all_related_text)
-      #         cg_list =  all_related_xml.findall('allRelatedGroup/conceptGroup')
-      #         ingredient = None
-      #         precise_ingredient = None
-      #     
-      #         # get IN and / or PIN if avalible
-      #         for e in cg_list:
-      #             tty_text = e.find('tty').text
-      #             if tty_text == 'IN':
-      #                 ingredient = e.findtext('conceptProperties/name')
-      #             elif tty_text == 'PIN':
-      #                 precise_ingredient = e.findtext('conceptProperties/name')
-      #             else:
-      #                 continue
-      # except urllib2.HTTPError, e:
-      #     print "HTTP error: %d" % e.code
-      # except urllib2.URLError, e:
-      #     print "Network error: %s" % e.reason.args[1]
-      
-      # name, dose, and frequency and required, all others optional
-      meds.append({
-        'name'                  : m.findtext(NS+'name'),
-        'dose'                  : m.find(NS+'dose').findtext(NS+'textValue'),
-        'frequency'             : m.findtext(NS+'frequency'),
-        'date_started'          : m.findtext(NS+'dateStarted'),
-        'date_stopped'          : m.findtext(NS+'dateStopped'),
-        'reason_stopped'        : m.findtext(NS+'reasonStopped'),
-        # need if clause in case route is missing.
-        'route'                 : m.find(NS+'route').attrib['abbrev'] if m.find(NS+'route') != None else '',
-        'brand_name'            : m.findtext(NS+'brandName')
-        # 'strength'
-        # 'prescription'
-        # 'details'
-        # 'ingredient'            : ingredient
-        # 'precise_ingredient'    : precise_ingredient
-      })
-    
-    # print simplejson.dumps(meds)
     return HttpResponse(simplejson.dumps(meds), mimetype='text/plain')
 
 def new_med():

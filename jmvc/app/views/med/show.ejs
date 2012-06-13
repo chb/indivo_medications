@@ -1,6 +1,11 @@
 
 
-<td><%= this.name %></td>
-<td><%= this.dose %> <%= this.dose_unit %> <%= this.frequency %></td>
-<td><%= this.route %></td>
-<td><%= this.date_started %></td>
+<td><%= this.drugName_title %></td>
+<td><%= this.quantity_value %> <%= this.quantity_unit %></td>
+<td><%= this.frequency_value %> <%=this.frequency_unit %></td>
+<td><%= this.instructions %></td>
+<td><%= this.startDate %></td>
+<td><%= this.endDate %></td>
+<td><% this.fulfillments.sort(function(a,b) {
+       return (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0;
+       });%><%= this.fulfillments[0].date %></td>
