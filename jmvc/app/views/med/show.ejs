@@ -6,6 +6,10 @@
 <td><%= this.instructions %></td>
 <td><%= this.startDate %></td>
 <td><%= this.endDate %></td>
-<td><% this.fulfillments.sort(function(a,b) {
-       return (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0;
-       });%><%= this.fulfillments[0].date %></td>
+<% this.fulfillments.sort(function(a,b) {
+    	return (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0;});%>
+<td>
+	<% if (this.fulfillments && this.fulfillments.length > 0) { %>       
+		<%= this.fulfillments[0].date %>
+	<% } %>
+</td>
