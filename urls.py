@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns
 from views import *
 import settings # app local
 
@@ -11,5 +11,3 @@ urlpatterns = patterns('',
     (r'^jmvc/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.JMVC_HOME}),
     (r'^(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.JS_HOME})
 )
-
-
